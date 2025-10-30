@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Security Camera Home</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #00ff2a;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding-bottom: 80px; /* plus d'espace en bas */
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 4.5em; /* texte agrandi */
+      text-align: center;
+      text-shadow: 0 0 20px #00ff2a;
+    }
+
+    .camera-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      justify-content: center;
+      margin: 60px auto;
+      width: 85%;
+    }
+
+    .camera {
+      position: relative;
+      width: 100%;
+      height: 240px;
+      background-color: #000;
+      border: 2px solid #00ff2a;
+      box-shadow: 0 0 20px #00ff2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      color: #00ff2a;
+    }
+
+    .camera img, .camera video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .label {
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+      font-size: 1.1em;
+      background: rgba(0, 102, 17, 0.2);
+      padding: 5px 10px;
+    }
+
+    .led {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 14px;
+      height: 14px;
+      background-color: #ff0000;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #ff0000;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+
+    .user-id {
+      text-align: center;
+      font-size: 2.5em; /* texte agrandi */
+      margin-top: 40px;
+      text-shadow: 0 0 15px hsl(246, 100%, 50%);
+    }
+
+    .side-bar {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 75px; /* élargi */
+      background-color: #00ff2a;
+      border: 2px solid #00ff2a;
+      box-shadow: 0 0 20px #00ff2a;
+      z-index: 10;
+    }
+
+    .side-bar.left {
+      left: 0;
+    }
+
+    .side-bar.right {
+      right: 0;
+    }
+
+    .fallback {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1em;
+      color: #00ff2a;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 6px 12px;
+      border: 1px solid #00ff2a;
+      text-shadow: 0 0 5px #00ff2a;
+    }
+  </style>
+</head>
+<body>
+  <div class="side-bar left"></div>
+  <div class="side-bar right"></div>
+
+  <h1>Bienvenue</h1>
+
+  <div class="camera-grid">
+    <div class="camera">
+      <span class="label">Caméra de surveillance 1</span>
+      <div class="led"></div>
+    </div>
+    <div class="camera">
+      <img src="https://static.wikia.nocookie.net/te4mab3illes-museum/images/8/8d/Capture_d%27%C3%A9cran_2025-09-27_110501.png/revision/latest/scale-to-width-down/1000?cb=20250927090628" alt="Caméra 2">
+      <span class="label">Caméra de surveillance 2</span>
+      <div class="led"></div>
+    </div>
+    <div class="camera" id="camera3">
+      <video id="webcam" autoplay muted playsinline></video>
+      <div class="fallback" id="fallback">Media not found</div>
+      <span class="label">Caméra de surveillance 3</span>
+      <div class="led"></div>
+    </div>
+    <div class="camera">
+      <span class="label">Caméra de surveillance 4</span>
+      <div class="led"></div>
+    </div>
+  </div>
+
+  <div class="user-id"><a href="User_98-111-98.html"> 98 111 98 </a></div>
+
+  <script>
+    const video = document.getElementById('webcam');
+    const fallback = document.getElementById('fallback');
+
+    navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+      .then(stream => {
+        video.srcObject = stream;
+        fallback.style.display = 'none';
+      })
+      .catch(err => {
+        console.warn("Accès caméra refusé ou indisponible :", err);
+        fallback.style.display = 'block';
+      });
+  </script>
+</body>
+</html>
