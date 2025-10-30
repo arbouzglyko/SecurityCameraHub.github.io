@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Security Camera Hub</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #00ff88;
+      font-family: 'Courier New', monospace;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .side {
+      position: absolute;
+      top: 0;
+      width: 300px;
+      height: 100%;
+      background-image: url('https://static.wikia.nocookie.net/te4mab3illes-museum/images/c/c8/Affiche.png/revision/latest?cb=20250927084909');
+      background-repeat: repeat-y;
+      background-size: contain;
+      opacity: 1;
+      z-index: 0;
+    }
+
+    .left { left: 0; }
+    .right { right: 0; }
+
+    .main {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 900px;
+      text-align: center;
+      z-index: 1;
+      animation: flicker 2s infinite;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #00ff88;
+      letter-spacing: 2px;
+    }
+
+    hr {
+      border: 1px solid #00ff88;
+      margin: 20px auto;
+      width: 60%;
+    }
+
+    a {
+      color: #00ff88;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #ff00ff;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 40px;
+      font-style: italic;
+      color: #ff00ff;
+    }
+
+    .paragraph {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin: 25px auto;
+      text-align: justify;
+      color: #ccc;
+    }
+
+    .screen {
+      width: 100%;
+      height: 200px;
+      background-color: #111;
+      border: 2px solid #00ff88;
+      box-shadow: inset 0 0 20px #00ff88;
+      margin: 30px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #00ff88;
+      letter-spacing: 1px;
+    }
+
+    .button {
+      padding: 12px 24px;
+      background-color: transparent;
+      color: #00ff88;
+      border: 2px solid #00ff88;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #00ff88;
+      color: #000;
+    }
+
+    .gif-container {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gif-container img {
+      width: 160px;
+      height: auto;
+      border: 2px solid #00ff88;
+      box-shadow: 0 0 10px #00ff88;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.9; }
+      25% { opacity: 0.7; }
+      75% { opacity: 0.95; }
+    }
+  </style>
+</head>
+<body>
+  <div class="side left"></div>
+  <div class="side right"></div>
+
+  <div class="main">
+    <h1>Security Camera Hub</h1>
+    <hr>
+
+    <p><a href="Shop.html">🛒 Boutique : Acheter des articles</a></p>
+
+    <h2>Security Camera Simulator</h2>
+    <p class="paragraph">
+      Ce module simule l'accès à un réseau de caméras fictives. Les flux sont générés à partir de données corrompues. 
+      Toute tentative d'interaction déclenche une réponse aléatoire. Ce système est instable. Vous avez été prévenu.
+    </p>
+
+    <div class="screen">[ SIGNAL ENCRYPTÉ ]</div>
+
+    <a href="https://youtu.be/x6mcUkhUyFQ">
+      <button class="button">▶ En savoir plus</button>
+    </a>
+
+    <div class="gif-container">
+      <img src="https://web.archive.org/web/20091027103337im_/http://geocities.com/jbsymons_2000/3002camani.gif" alt="Free Trial">
+      <img src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif" alt="No Content">
+      <img src="https://web.archive.org/web/20091027070912im_/http://geocities.com/kaichowlau/digits.gif" alt="Crypted">
+      <img src="https://web.archive.org/web/20090728040326im_/http://uk.geocities.com/kris_holgate2002/camera.gif" alt="Camera">
+      <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Loading">
+    </div>
+  </div>
+</body>
+</html>
