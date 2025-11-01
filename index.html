@@ -97,6 +97,17 @@
     <button onclick="document.getElementById('ambiance').play()">Activer la musique</button>
     <audio id="ambiance" src="https://static.wikia.nocookie.net/backrooms-freewriting/images/8/8a/Lastminutesofnostaliga.mp3" type="audio/mpeg"></audio>
 
+    <script>
+        window.addEventListener('load', () => {
+            const audio = document.getElementById('ambiance');
+            audio.volume = 0.5;
+            audio.play().catch(() => {
+                // Autoplay might be blocked by browser
+                console.log("Lecture automatique bloquée. L'utilisateur doit interagir.");
+            });
+        });
+    </script>
+
     <div class="gif-container">
         <img src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif" alt="eye distortion">
         <img src="https://web.archive.org/web/20091026173953im_/http://geocities.com/Paris/Gallery/1134/logoani.gif" alt="creepy smile">
