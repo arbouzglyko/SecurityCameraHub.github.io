@@ -1,107 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>THE PROTOCOL</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url("https://i.postimg.cc/MpMNcw5b/image.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-family: 'Courier New', Courier, monospace;
-            color: #ffffff;
-            animation: flicker 3s infinite;
-        }
+  <meta charset="UTF-8">
+  <title>THE PROTOCOL</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #0b0b0b;
+      background-image: url("https://i.postimg.cc/MpMNcw5b/image.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #d0d0d0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 100vh;
+    }
 
-        h1 {
-            color: rgb(42, 20, 163);
-            font-size: 3em;
-            text-shadow: 0 0 10px #fff;
-            margin-top: 40px;
-        }
+    h1 {
+      font-size: 3.2em;
+      margin-top: 40px;
+      text-transform: uppercase;
+      color: #630000; 
+      text-shadow: 0 0 20px #8a2c2c;
+      letter-spacing: 2px;
+    }
 
-        p, .rule {
-            font-size: 1.2em;
-            margin: 10px;
-        }
+    p {
+      font-size: 1.1em;
+      margin: 10px;
+      color: #000000;
+    }
 
-        .rule1 { color: #7869ff; }
-        .rule2 { color: rgb(47, 179, 255); }
-        .rule3 {
-            color: rgb(0, 0, 0);
-            background-color: rgb(255, 0, 0);
-            padding: 5px;
-            border-radius: 5px;
-        }
+    .rule {
+      font-size: 1em;
+      margin: 10px 0;
+      padding: 12px 24px;
+      background: rgba(20, 20, 20);
+      border-left: 4px solid #197c00; 
+      width: 80%;
+      max-width: 600px;
+      text-align: left;
+      box-shadow: 0 0 10px rgba(58, 95, 58, 0.3);
+    }
 
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1em;
-            background-color: #000;
-            color: #fff;
-            border: 2px solid #fff;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
+    .rule1 { color: #ffffff; }
+    .rule2 { color: #ffffff; }
+    .rule3 {
+      color: #fff;
+      background-color: #330000;
+      border-left-color: #8a2c2c;
+      box-shadow: 0 0 12px #8a2c2c;
+    }
 
-        button:hover {
-            transform: scale(1.1);
-        }
+    form, .music-control {
+      margin-top: 30px;
+    }
 
-        @keyframes flicker {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-            25% { opacity: 0.6; }
-            75% { opacity: 0.9; }
-        }
+    button {
+      padding: 12px 24px;
+      font-size: 1em;
+      background-color: #000000;
+      opacity: 0.8;
+      color: #ffffff;
+      border: 2px solid #000000;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      box-shadow: 0 0 8px #ffffff;
+    }
 
-        .gif-container {
-            margin-top: 30px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+    button:hover {
+      background-color: #ffffff;
+      color: #000000;
+      transform: scale(1.05);
+    }
 
-        .gif-container img {
-            width: 160px;
-            height: auto;
-            border: 2px solid #fff;
-            box-shadow: 0 0 10px #fff;
-        }
-    </style>
+    .gif-container {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gif-container img {
+      width: 160px;
+      height: auto;
+      border: 2px solid #444;
+      box-shadow: 0 0 10px #222;
+      transition: transform 0.3s ease;
+    }
+
+    .gif-container img:hover {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
-    <h1>Bienvenue, Vagabon</h1>
-    <p>⚠️ Vous vous apprêtez à pénétrer un site semi-confidentiel.</p>
-    <p>Veuillez accepter les règles ci-dessous avant de poursuivre :</p>
+  <h1>THE PROTOCOL</h1>
+  <p>⚠️ Vous vous apprêtez à pénétrer un espace non indexé.</p>
+  <p>Veuillez accepter les règles ci-dessous avant de poursuivre :</p>
 
-    <div class="rule rule1">1. Votre vie privée pourrait ne pas exister. Certains mouvements sont enregistrés.</div>
-    <div class="rule rule2">2. Tout être humain mérite d’être observé.</div>
-    <div class="rule rule3">3. Tout participant doit avoir au moins 18 ans et contenir π dans son âge.</div>
+  <div class="rule rule1">1. Votre vie privée pourrait ne pas exister. Certains mouvements sont enregistrés.</div>
+  <div class="rule rule2">2. Tout être humain mérite d’être observé.</div>
+  <div class="rule rule3">3. Tout participant doit avoir au moins 18 ans et contenir π dans son âge.</div>
 
-    <form action="Home.html">
-        <button type="submit">J'accepte les règles</button>
-    </form>
+  <form action="Home.html">
+    <button type="submit">J'accepte les règles</button>
+  </form>
 
-    <button onclick="document.getElementById('ambiance').play()">Activer la musique</button>
+  <div class="music-control">
+    <button onclick="document.getElementById('ambiance').play()">🎵 Activer la musique</button>
     <audio id="ambiance" src="https://static.wikia.nocookie.net/backrooms-freewriting/images/8/8a/Lastminutesofnostaliga.mp3" type="audio/mpeg"></audio>
+  </div>
 
-    <div class="gif-container">
-        <img src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif" alt="eye distortion">
-        <img src="https://web.archive.org/web/20091026173953im_/http://geocities.com/Paris/Gallery/1134/logoani.gif" alt="creepy smile">
-        <img src="https://web.archive.org/web/20091027070245if_/http://de.geocities.com/lukaslober/pix/tv-widget-Kopie.gif" alt="void loop">
-        <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="ritual glitch">
-    </div>
+  <div class="gif-container">
+    <img src="https://web.archive.org/web/20091027070245if_/http://de.geocities.com/lukaslober/pix/tv-widget-Kopie.gif" alt="???">
+    <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="???">
+  </div>
 </body>
 </html>
