@@ -20,7 +20,7 @@
       top: 0;
       width: 300px;
       height: 100%;
-      background-image: url("img/affiche.png");
+      background-image: url('https://static.wikia.nocookie.net/te4mab3illes-museum/images/c/c8/Affiche.png/revision/latest?cb=20250927084909');
       background-repeat: repeat-y;
       background-size: contain;
       opacity: 1;
@@ -132,6 +132,56 @@
       25% { opacity: 0.7; }
       75% { opacity: 0.95; }
     }
+
+    @media screen and (max-width: 768px) {
+  .side {
+    display: none;
+  }
+
+  .main {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 90%;
+    margin: 40px auto;
+    animation: none;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .screen {
+    font-size: 1.2rem;
+    height: 150px;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .gif-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gif-container img {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -143,10 +193,6 @@
     <hr>
 
     <p><a href="Shop.html">🛒 Boutique : Acheter des articles</a></p>
-    <p><a href="https://discord.gg/2bdQvJ8ZKa 
-">📞 Contacte support : https://discord.gg/2bdQvJ8ZKa 
-</a></p>
-
 
     <h2>Security Camera Simulator</h2>
     <p class="paragraph">
@@ -156,7 +202,7 @@
 
     <div class="screen">[ SIGNAL ENCRYPTÉ ]</div>
 
-    <a href="https://youtu.be/x6mcUkhUyFQ">
+    <a href="https://youtu.be/WvCJyPHKELw?si=ir3PZv4fHboI3eEe">
       <button class="button">▶ En savoir plus</button>
     </a>
 
